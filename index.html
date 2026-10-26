@@ -1,43 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nour ❤️ Rahom</title>
+<title>Nour Russia</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Poppins:wght@600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#ff9a9e,#fecfef,#f6d365);
-  font-family: Arial;
+  min-height:100vh;background:#000;
+  display:flex;justify-content:center;align-items:center;
+  font-family:'Poppins',sans-serif;overflow:hidden;
 }
+body::before{
+  content:'';position:absolute;width:600px;height:600px;
+  background: radial-gradient(circle, rgba(106,17,203,0.15), transparent 70%);
+  animation: move 8s infinite alternate;
+}
+@keyframes move{0%{transform:translate(-200px,-200px)}100%{transform:translate(200px,200px)}}
 .card{
-  background:white;
-  padding:40px 30px;
-  border-radius:25px;
+  position:relative;z-index:1;
+  width:90%;max-width:360px;
+  background:rgba(15,15,15,0.9);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:24px;padding:35px 25px;
   text-align:center;
-  box-shadow:0 15px 35px rgba(0,0,0,0.2);
-  max-width:320px;
-  width:90%;
+  box-shadow:0 0 40px rgba(106,17,203,0.2);
 }
-h1{color:#ff4d6d; margin:0; font-size:32px;}
-h2{color:#333; margin:15px 0; font-size:20px;}
-.love{font-size:24px; color:#ff006e; margin-top:20px; font-weight:bold; animation: pulse 1.5s infinite;}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
-.date{font-size:22px; margin:20px 0; color:#6a11cb; font-weight:bold;}
+.glow-text{
+  font-family:'Orbitron',sans-serif;
+  font-size:36px;font-weight:800;
+  background: linear-gradient(90deg,#ff00cc,#00ffcc,#00ccff,#ffcc00,#ff00cc);
+  background-size:400% 400%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation: colorMove 3s linear infinite, glow 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255,0,204,0.5));
+}
+@keyframes colorMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes glow{
+  0%,100%{filter: drop-shadow(0 0 8px #ff00cc) drop-shadow(0 0 20px #00ffcc)}
+  50%{filter: drop-shadow(0 0 15px #00ccff) drop-shadow(0 0 30px #ffcc00)}
+}
+.sub{
+  color:#aaa;font-size:14px;margin:12px 0;
+  letter-spacing:2px;
+  animation: blink 2s infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
+.date{
+  color:#fff;font-size:13px;margin:15px 0;
+  background:rgba(255,255,255,0.05);
+  padding:8px 14px;border-radius:20px;
+  display:inline-block;border:1px solid rgba(255,255,255,0.1);
+}
+.love{
+  font-size:22px;font-weight:800;margin:20px 0;
+  background: linear-gradient(90deg,#ff4d6d,#ff00cc,#00ffcc);
+  background-size:200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  animation: colorMove 2s linear infinite;
+  text-shadow:0 0 20px rgba(255,0,204,0.6);
+}
+.social{display:grid;gap:10px;margin-top:25px}
+.btn{
+  padding:12px;border-radius:12px;
+  text-decoration:none;color:white;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:14px;font-weight:600;
+  transition:0.3s;
+}
+.btn:hover{
+  background:rgba(255,255,255,0.1);
+  box-shadow:0 0 15px currentColor;
+  transform:translateY(-2px);
+}
+.whatsapp:hover{color:#25D366;border-color:#25D366}
+.facebook:hover{color:#1877F2;border-color:#1877F2}
+.tiktok:hover{color:#fff;border-color:#ff0050;box-shadow:0 0 15px #ff0050}
+.instagram:hover{color:#ff00cc;border-color:#ff00cc}
+.footer{margin-top:20px;font-size:10px;color:#555;letter-spacing:1px}
 </style>
 </head>
 <body>
 <div class="card">
-<h1>Nour Russia 💖</h1>
-<div class="date">🧿 April 12 4:56 Forever 🫶🏻</div>
-<h2>Welcome to My World</h2>
-<div class="love">I love rahom ❤️</div>
-<p>Website is Live Now!</p>
-<p>© 2026 Nour - All Rights Reserved</p>
+  <div class="glow-text">Nour Russia</div>
+  <div class="sub">SYSTEM ONLINE</div>
+  <div class="date">🧿 April 12 4:56 Forever 🫶🏻</div>
+  <div style="color:#ccc;font-size:14px;margin-top:10px">Welcome to My World</div>
+  <div class="love">I love rahom ❤️</div>
+
+  <div class="social">
+    <a class="btn whatsapp" href="https://wa.me/201234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a class="btn facebook" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a class="btn tiktok" href="https://tiktok.com/@" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a class="btn instagram" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+
+  <div class="footer">© 2026 NOUR RUSSIA // ALL RIGHTS RESERVED</div>
 </div>
 </body>
 </html>
